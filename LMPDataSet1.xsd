@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LMPDataSet1" targetNamespace="http://tempuri.org/LMPDataSet1.xsd" xmlns:mstns="http://tempuri.org/LMPDataSet1.xsd" xmlns="http://tempuri.org/LMPDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LMPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LMPConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LMP.Properties.Settings.GlobalReference.Default.LMPConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vClasificacionTableAdapter" GeneratorDataComponentClassName="vClasificacionTableAdapter" Name="vClasificacion" UserDataComponentName="vClasificacionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LMPConnectionString (Settings)" DbObjectName="LMP.dbo.vClasificacion" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, Posicion, idEstadisticasEquipos FROM dbo.vClasificacion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="Posicion" DataSetColumn="Posicion" />
+              <Mapping SourceColumn="idEstadisticasEquipos" DataSetColumn="idEstadisticasEquipos" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LMPDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="LMPDataSet1" msprop:Generator_DataSetName="LMPDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vClasificacion" msprop:Generator_RowEvHandlerName="vClasificacionRowChangeEventHandler" msprop:Generator_RowDeletedName="vClasificacionRowDeleted" msprop:Generator_RowDeletingName="vClasificacionRowDeleting" msprop:Generator_RowEvArgName="vClasificacionRowChangeEvent" msprop:Generator_TablePropName="vClasificacion" msprop:Generator_RowChangedName="vClasificacionRowChanged" msprop:Generator_RowChangingName="vClasificacionRowChanging" msprop:Generator_TableClassName="vClasificacionDataTable" msprop:Generator_RowClassName="vClasificacionRow" msprop:Generator_TableVarName="tablevClasificacion" msprop:Generator_UserTableName="vClasificacion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="Posicion" msprop:Generator_ColumnPropNameInRow="Posicion" msprop:Generator_ColumnPropNameInTable="PosicionColumn" msprop:Generator_ColumnVarNameInTable="columnPosicion" msprop:Generator_UserColumnName="Posicion" type="xs:int" />
+              <xs:element name="idEstadisticasEquipos" msprop:Generator_ColumnPropNameInRow="idEstadisticasEquipos" msprop:Generator_ColumnPropNameInTable="idEstadisticasEquiposColumn" msprop:Generator_ColumnVarNameInTable="columnidEstadisticasEquipos" msprop:Generator_UserColumnName="idEstadisticasEquipos" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vClasificacion" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

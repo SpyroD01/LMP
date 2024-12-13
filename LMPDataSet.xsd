@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LMPDataSet" targetNamespace="http://tempuri.org/LMPDataSet.xsd" xmlns:mstns="http://tempuri.org/LMPDataSet.xsd" xmlns="http://tempuri.org/LMPDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LMPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LMPConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LMP.Properties.Settings.GlobalReference.Default.LMPConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vEstadisticasEquiposTableAdapter" GeneratorDataComponentClassName="vEstadisticasEquiposTableAdapter" Name="vEstadisticasEquipos" UserDataComponentName="vEstadisticasEquiposTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LMPConnectionString (Settings)" DbObjectName="LMP.dbo.vEstadisticasEquipos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, Derrotas, Victorias, idEquipo FROM dbo.vEstadisticasEquipos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="Derrotas" DataSetColumn="Derrotas" />
+              <Mapping SourceColumn="Victorias" DataSetColumn="Victorias" />
+              <Mapping SourceColumn="idEquipo" DataSetColumn="idEquipo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LMPDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="LMPDataSet" msprop:Generator_DataSetName="LMPDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vEstadisticasEquipos" msprop:Generator_RowEvHandlerName="vEstadisticasEquiposRowChangeEventHandler" msprop:Generator_RowDeletedName="vEstadisticasEquiposRowDeleted" msprop:Generator_RowDeletingName="vEstadisticasEquiposRowDeleting" msprop:Generator_RowEvArgName="vEstadisticasEquiposRowChangeEvent" msprop:Generator_TablePropName="vEstadisticasEquipos" msprop:Generator_RowChangedName="vEstadisticasEquiposRowChanged" msprop:Generator_RowChangingName="vEstadisticasEquiposRowChanging" msprop:Generator_TableClassName="vEstadisticasEquiposDataTable" msprop:Generator_RowClassName="vEstadisticasEquiposRow" msprop:Generator_TableVarName="tablevEstadisticasEquipos" msprop:Generator_UserTableName="vEstadisticasEquipos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="Derrotas" msprop:Generator_ColumnPropNameInRow="Derrotas" msprop:Generator_ColumnPropNameInTable="DerrotasColumn" msprop:Generator_ColumnVarNameInTable="columnDerrotas" msprop:Generator_UserColumnName="Derrotas" type="xs:int" />
+              <xs:element name="Victorias" msprop:Generator_ColumnPropNameInRow="Victorias" msprop:Generator_ColumnPropNameInTable="VictoriasColumn" msprop:Generator_ColumnVarNameInTable="columnVictorias" msprop:Generator_UserColumnName="Victorias" type="xs:int" />
+              <xs:element name="idEquipo" msprop:Generator_ColumnPropNameInRow="idEquipo" msprop:Generator_ColumnPropNameInTable="idEquipoColumn" msprop:Generator_ColumnVarNameInTable="columnidEquipo" msprop:Generator_UserColumnName="idEquipo" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vEstadisticasEquipos" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
